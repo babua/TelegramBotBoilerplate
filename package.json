@@ -1,0 +1,9 @@
+{
+	"name": "TelegramBotBoilerplate",
+	"version" : "0.0.1",
+	"description" : "Boilerplate for making a Telegram bot",
+	"dependencies" : {
+		"node-telegram-bot" : "latest",
+		"request" : "latest"
+	}
+}
