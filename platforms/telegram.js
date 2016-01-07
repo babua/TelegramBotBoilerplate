@@ -3,7 +3,7 @@
 var Bot = require('node-telegram-bot'),
     config = require('../config/config.js');
 
-var telegramPlatform = function (mokumanonybot) {
+var telegramPlatform = function (boilerplatebot) {
     var self = this;
 
     self.typing = function (state) {
@@ -62,7 +62,7 @@ var telegramPlatform = function (mokumanonybot) {
 
         //Commented out so I don't see any user data
         //self.debug(state);
-        mokumanonybot.onMessage(self, state.parameters, state);
+        boilerplatebot.onMessage(self, state.parameters, state);
     });
 
     self.botInstance.start();

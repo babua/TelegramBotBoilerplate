@@ -2,7 +2,7 @@
 
 var readline = require('readline');
 
-var consolePlatform = function (mokumanonybot) {
+var consolePlatform = function (boilerplatebot) {
     var self = this;
 
     self.typing = function (state) {
@@ -30,7 +30,7 @@ var consolePlatform = function (mokumanonybot) {
         output: process.stdout
     });
 
-    self.readlineInstance.setPrompt('MokumAnonyBot> ');
+    self.readlineInstance.setPrompt('BoilerplateBot> ');
     self.readlineInstance.prompt();
 
     self.readlineInstance.on('line', function (reply) {
@@ -47,7 +47,7 @@ var consolePlatform = function (mokumanonybot) {
 
         self.debug(state);
 
-        mokumanonybot.onMessage(self, state.parameters, state);
+        boilerplatebot.onMessage(self, state.parameters, state);
 
         self.readlineInstance.prompt();
     });
